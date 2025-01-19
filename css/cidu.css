@@ -56,7 +56,7 @@ button {
 }
 
 .selected {
-  background-color: #ff839a;
+  background-color: #ff437b;
   color: white;
 }
 
@@ -95,7 +95,7 @@ button {
   font-size: 0.875rem;
   line-height: 1rem;
   background-color: #fff3f5;
-  color: #ff839a;
+  color: #ff437b;
   padding: 0.25rem;
   border-radius: 4px;
   margin-right: 0.25rem;
@@ -140,8 +140,8 @@ button {
   font-size: 0.75rem;
   line-height: 1;
   padding: 2px 1px;
-  color: #ff839a;
-  border: #ff839a 1px solid;
+  color: #ff437b;
+  border: #ff437b 1px solid;
   border-radius: 4px;
   text-align: center;
   margin-right: 0.25rem;

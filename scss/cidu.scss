@@ -1,3 +1,5 @@
+$cr1:#ff437b;
+
 html,
 body {
   margin: 0;
@@ -63,7 +65,7 @@ button {
 }
 
 .selected {
-  background-color: #ff839a;
+  background-color: $cr1;
   color: white;
 }
 
@@ -103,7 +105,7 @@ button {
     font-size: 0.875rem;
     line-height: 1rem;
     background-color: #fff3f5;
-    color: #ff839a;
+    color:$cr1;
     padding: 0.25rem;
     border-radius: 4px;
     margin-right: 0.25rem;
@@ -156,8 +158,8 @@ button {
     font-size: 0.75rem;
     line-height: 1;
     padding: 2px 1px;
-    color: #ff839a;
-    border: #ff839a 1px solid;
+    color:$cr1;
+    border:$cr1 1px solid;
     border-radius: 4px;
     text-align: center;
     margin-right: 0.25rem;
