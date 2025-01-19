@@ -52,13 +52,13 @@
                 <div class="col filter-button-group">
                     <!-- 日期 -->
                     <button class="filter-button selected" data-dimension="date" data-filter="*">ALL</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0208">2/08(四)小年夜</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0209">2/09(五)除夕</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0210">01/29(六)初一</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0211">01/30(日)初二</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0212">01/31(一)初三</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0213">02/01(二)初四</button>
-                    <button class="filter-button" data-dimension="date" data-filter=".d0214">02/02(三)初五</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0127">01/27(四)小年夜</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0128">01/28(五)除夕</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0129">01/29(六)初一</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0130">01/30(日)初二</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0131">01/31(一)初三</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0201">02/01(二)初四</button>
+                    <button class="filter-button" data-dimension="date" data-filter=".d0202">02/02(三)初五</button>
 
                     <!-- 類別 -->
                     <button class="filter-button selected" data-dimension="cate" data-filter="*">ALL</button>
@@ -248,13 +248,15 @@
                         const cardElement = document.createElement('div');
 
                         // 根據營業日期生成對應的CSS class
-                        const businessDaysClasses = card.businessDays.map(day => {
-                            const monthDay = day.date.match(/\d+\/(\d+)/); // 匹配月份和日期
-                            if (monthDay && monthDay[1]) {
-                                return `d02${monthDay[1].padStart(2, '0')}`; // 生成class，如d208
-                            }
-                            return ''; // 如果匹配失敗，返回空字符串
-                        }).join(' ');
+                     const businessDaysClasses = card.businessDays.map(day => {
+    const dateMatch = day.date.match(/(\d+)\/(\d+)/); // 匹配月份和日期
+    if (dateMatch && dateMatch[1] && dateMatch[2]) {
+        const month = dateMatch[1].padStart(2, '0'); // 確保月份補零
+        const day = dateMatch[2].padStart(2, '0'); // 確保日期補零
+        return `d${month}${day}`; // 生成class，例如 d0127 或 d0202
+    }
+    return ''; // 如果匹配失敗，返回空字符串
+}).join(' ');
 
                         cardElement.className = `grid-item col-md-6 col-xl-4 filterDiv ${businessDaysClasses} ${cateClass} `;
                         cardElement.innerHTML = `
