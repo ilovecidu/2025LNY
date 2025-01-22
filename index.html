@@ -192,26 +192,47 @@
                             }
                         },
 
-                         {
-                                                    cate: '其',
-                                                    name: '七堵社區體能館',
-                                                    businessDays: [
-                                                        { date: '01/27(一)', time: '正常營業' },
-                                                        // { date: '01/28 除夕', time: '正常營業' },
-                                                        // { date: '01/29 初一', time: '正常營業' },
-                                                        // { date: '01/30 初二', time: '正常營業' },
-                                                        // { date: '01/31 初三', time: '正常營業' },
-                                                        // { date: '02/01 初四', time: '正常營業' },
-                                                        // { date: '02/02 初五', time: '正常營業' },
-                                                    ],
-                                                    note: '01/27(一)無下午公益時段',
-                                                    socialLinks: {
-                                                        facebook: 'https://www.facebook.com/QiduDFC',
-                                                        // instagram: '#',
-                                                        // customLink:'#',
-                                                        map: 'https://maps.app.goo.gl/qoX5w2F1Lt26K3Nx9'
-                                                    }
-                                                },
+                        {
+                            cate: '其',
+                            name: '七堵社區體能館',
+                            businessDays: [
+                                { date: '01/27(一)', time: '正常營業' },
+                                // { date: '01/28 除夕', time: '正常營業' },
+                                // { date: '01/29 初一', time: '正常營業' },
+                                // { date: '01/30 初二', time: '正常營業' },
+                                // { date: '01/31 初三', time: '正常營業' },
+                                // { date: '02/01 初四', time: '正常營業' },
+                                // { date: '02/02 初五', time: '正常營業' },
+                            ],
+                            note: '01/27(一)無下午公益時段',
+                            socialLinks: {
+                                facebook: 'https://www.facebook.com/QiduDFC',
+                                // instagram: '#',
+                                // customLink:'#',
+                                map: 'https://maps.app.goo.gl/qoX5w2F1Lt26K3Nx9'
+                            }
+                        },
+
+                        {
+                            cate: '其',
+                            name: '指沐-Bobo Studio複合式美甲美學',
+                            businessDays: [
+                                { date: '01/27(一)', time: '正常營業' },
+                                { date: '01/28 除夕', time: '9AM~6PM' },
+                                { date: '01/29 初一', time: '10AM~5PM(可預約加開時段)' },
+                                { date: '01/30 初二', time: '10AM~5PM(可預約加開時段)' },
+                                { date: '01/31 初三', time: '10AM~5PM(可預約加開時段)' },
+                                // { date: '02/01 初四', time: '正常營業' },
+                                // { date: '02/02 初五', time: '正常營業' },
+                            ],
+                            note: '',
+                            socialLinks: {
+                                facebook: 'https://www.facebook.com/Bobonailstudio/',
+                                instagram: 'https://www.instagram.com/bobonail_studio/',
+                                customLink: 'https://lin.ee/XMYoXWx',
+                                map: 'https://g.co/kgs/sD3wCVu'
+                            }
+                        },
 
                         //  {
                         //                             cate: '其',
@@ -248,15 +269,15 @@
                         const cardElement = document.createElement('div');
 
                         // 根據營業日期生成對應的CSS class
-                     const businessDaysClasses = card.businessDays.map(day => {
-    const dateMatch = day.date.match(/(\d+)\/(\d+)/); // 匹配月份和日期
-    if (dateMatch && dateMatch[1] && dateMatch[2]) {
-        const month = dateMatch[1].padStart(2, '0'); // 確保月份補零
-        const day = dateMatch[2].padStart(2, '0'); // 確保日期補零
-        return `d${month}${day}`; // 生成class，例如 d0127 或 d0202
-    }
-    return ''; // 如果匹配失敗，返回空字符串
-}).join(' ');
+                        const businessDaysClasses = card.businessDays.map(day => {
+                            const dateMatch = day.date.match(/(\d+)\/(\d+)/); // 匹配月份和日期
+                            if (dateMatch && dateMatch[1] && dateMatch[2]) {
+                                const month = dateMatch[1].padStart(2, '0'); // 確保月份補零
+                                const day = dateMatch[2].padStart(2, '0'); // 確保日期補零
+                                return `d${month}${day}`; // 生成class，例如 d0127 或 d0202
+                            }
+                            return ''; // 如果匹配失敗，返回空字符串
+                        }).join(' ');
 
                         cardElement.className = `grid-item col-md-6 col-xl-4 filterDiv ${businessDaysClasses} ${cateClass} `;
                         cardElement.innerHTML = `
