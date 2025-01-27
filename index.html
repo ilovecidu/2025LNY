@@ -412,7 +412,7 @@
                             cate: '醫',
                             name: '杏福診所',
                             businessDays: [
-                                { date: '01/27 (一)', time: '8:30AM~12PM 3PM~6PM 6:30PM~9PM' },
+                                { date: '01/27 (一)', time: '8:30AM~12PM<br>3PM~6PM<br>6:30PM~9PM' },
                                 { date: '01/28 除夕', time: '7:30AM~12PM' },
                                 // { date: '01/29 初一', time: '' },
                                 // { date: '01/30 初二', time: '' },
@@ -972,7 +972,7 @@
       <div class="card-body">
         <div class="row">
           ${card.businessDays.map(day => `
-            <div class="col-md-6 mb-1">
+            <div class="col-6 mb-1">
               <div class="d-flex align-items-center">
                 <div class="card-date">${day.date}</div>
                 <div class="card-time">${day.time}</div>
