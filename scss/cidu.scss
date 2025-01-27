@@ -153,20 +153,21 @@ button {
   }
 
   &-date {
-    min-width: 60px;
-    text-align: center;
+    min-width: 64px; 
     font-size: 0.75rem;
     line-height: 1;
-    padding: 2px 1px;
+    padding: 2px 2px;
     color:$cr1;
     border:$cr1 1px solid;
     border-radius: 4px;
-    text-align: center;
+    text-align: left;
     margin-right: 0.25rem;
+    height: fit-content;
   }
 
   &-time {
     color: #404040;
+    line-height: 18px;
   }
 
   &-content {

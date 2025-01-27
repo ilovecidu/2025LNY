@@ -135,19 +135,22 @@ button {
   color: #e25252;
 }
 .card-date {
-  min-width: 60px;
-  text-align: center;
+  min-width: 64px;
   font-size: 0.75rem;
   line-height: 1;
-  padding: 2px 1px;
+  padding: 2px 2px;
   color: #ff437b;
   border: #ff437b 1px solid;
   border-radius: 4px;
-  text-align: center;
+  text-align: left;
   margin-right: 0.25rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 .card-time {
   color: #404040;
+  line-height: 18px;
 }
 .card-content {
   font-size: 0.875rem;
