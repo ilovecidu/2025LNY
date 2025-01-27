@@ -36,6 +36,7 @@ body {
 .header {
   font-family: "Noto Serif TC", serif;
   text-align: center;
+  margin: 0;
   padding: 3rem 1rem;
   font-size: 2rem;
   font-weight: bold;
@@ -153,8 +154,8 @@ button {
   }
 
   &-date {
-    min-width: 64px; 
-    font-size: 0.75rem;
+    min-width: 76px; 
+    // font-size: 0.75rem;
     line-height: 1;
     padding: 2px 2px;
     color:$cr1;
@@ -167,7 +168,6 @@ button {
 
   &-time {
     color: #404040;
-    line-height: 18px;
   }
 
   &-content {
